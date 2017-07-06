@@ -1,0 +1,16 @@
+holder sub role
+asset sub role
+home sub role
+resident sub role
+
+
+#qualitative types written as roles
+
+
+holds sub relation
+	relates holder
+	relates asset
+
+livesIn sub relation
+	relates resident
+	relates home

@@ -1,0 +1,29 @@
+
+#ACCOUNT 
+age sub resource datatype long; #how long the account is held for, credit_usage in the data
+current_balance sub resource datatype float; 
+installment_rate sub resource datatype float; #location in the data
+cc_age sub resource datatype long; #credit card age in months
+purpose sub resource datatype string; #{ 'new car', 'used car', furniture/equipment, radio/tv, 'domestic appliance', repairs, education, vacation, retraining, business, other}
+
+over_draft sub resource datatype string; #{'<0', '0<=X<200', '>=200', 'no checking'}
+credit_history sub resource datatype string; #{ 'no credits/all paid', 'all paid', 'existing paid', 'delayed previously', 'critical/other existing credit'}
+Average_Credit_Balance sub resource datatype string; #{ '<100', '100<=X<500', '500<=X<1000', '>=1000', 'no known savings'}
+
+other_parties sub resource datatype string; #{ none, 'co applicant', guarantor}
+other_payment_plans sub resource datatype string; #{ bank, stores, none}
+
+#PERSON
+personal_status sub resource datatype string;
+job sub resource datatype string;
+employment_length sub resource datatype string; #employed since { unemployed, '<1', '1<=X<4', '4<=X<7', '>=7'}
+num_dependents sub resource datatype long; #num of people liable to provide maintenance for
+existing_credits sub resource datatype long; #number of existing credits with bank.
+
+#HOUSING
+ownership_type sub resource datatype string; #was housing in the data
+residence_since sub resource datatype long;
+
+#PROPERTY 
+name sub resource datatype string; #property_magnitude, includes telephone
+
