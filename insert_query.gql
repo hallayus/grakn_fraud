@@ -1,29 +1,29 @@
-match $j isa job has name <job>, $i isa residence has ownership_type <housing>, $k isa phone, $l isa property has name <property_magnitude>;
+match $j has name <job>; $i has ownership_type <housing>; $l has name <property_magnitude>; $k isa phone;
 
 
 insert
 	$x isa person
-		has personal_status <personal_status>;
-		has num_dependents @long(<num_dependents>);
-		has is_foreign_worker <foreign_worker>;
-		has existing_credits <existing_credits>;
+		has personal_status <personal_status>
+		has num_dependents @long(<num_dependents>)
+		has is_foreign_worker <foreign_worker>
+		has existing_credits @long(<existing_credits>);
 
 	$y isa account
-		has duration @long(<credit_usage>);
-		has current_balance @double(<current_balance>);
-		has installment_rate @double(<location>);
-		has cc_age @long(<cc_age>);
+		has duration @long(<credit_usage>)
+		has current_balance @double(<current_balance>)
+		has installment_rate @double(<location>)
+		has cc_age @long(<cc_age>)
 
-		has purpose <purpose>;
-		has over_draft <over_draft>;
-		has credit_history <credit_history>;
-		has Average_Credit_Balance <Average_Credit_Balance>;
-		has other_parties <other_parties>;
+		has purpose <purpose>
+		has over_draft <over_draft>
+		has credit_history <credit_history>
+		has Average_Credit_Balance <Average_Credit_Balance>
+		has other_parties <other_parties>
 		has other_payment_plans <other_payment_plans>;
 
 	(worker : $x, employment : $j) isa worksAs has employment_length <employment>;
 	(resident : $x, home : $i) isa livesIn has resident_since @long(<residence_since>);
 	(holder : $x, asset : $y) isa holds;
 	(holder : $x, asset : $l) isa holds;
-	if (<own_telephone> = 'yes') do {(holder : $x, asset : $k) isa holds};
+	if (<own_telephone> = "yes") do { (holder : $x, asset : $k) isa holds; }
 
