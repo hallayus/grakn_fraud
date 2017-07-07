@@ -1,8 +1,12 @@
 
+insert
+
+name sub resource datatype string; #property_magnitude, includes telephone
+
 #ACCOUNT 
-age sub resource datatype long; #how long the account is held for, credit_usage in the data
-current_balance sub resource datatype float; 
-installment_rate sub resource datatype float; #location in the data
+duration sub resource datatype long; #how long the account is held for, credit_usage in the data
+current_balance sub resource datatype double; 
+installment_rate sub resource datatype double; #location in the data
 cc_age sub resource datatype long; #credit card age in months
 purpose sub resource datatype string; #{ 'new car', 'used car', furniture/equipment, radio/tv, 'domestic appliance', repairs, education, vacation, retraining, business, other}
 
@@ -15,15 +19,15 @@ other_payment_plans sub resource datatype string; #{ bank, stores, none}
 
 #PERSON
 personal_status sub resource datatype string;
-job sub resource datatype string;
-employment_length sub resource datatype string; #employed since { unemployed, '<1', '1<=X<4', '4<=X<7', '>=7'}
 num_dependents sub resource datatype long; #num of people liable to provide maintenance for
 existing_credits sub resource datatype long; #number of existing credits with bank.
+is_foreign_worker sub resource datatype string; #yes or no
 
 #HOUSING
 ownership_type sub resource datatype string; #was housing in the data
-residence_since sub resource datatype long;
+resident_since sub resource datatype long;
 
-#PROPERTY 
-name sub resource datatype string; #property_magnitude, includes telephone
+#EMPLOYMENT has name as above
+employment_length sub resource datatype string; #employed since { unemployed, '<1', '1<=X<4', '4<=X<7', '>=7'}
+
 

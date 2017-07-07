@@ -1,43 +1,42 @@
+insert
+
 account sub entity
-	has credit_usage
-	has age
-	has credit_usage
+	has duration
 	has current_balance
 	has installment_rate
-	has residence_since
 	has cc_age
-	has existing_credits
-	has num_dependents
 
+	has purpose
 	has over_draft
 	has credit_history
-	has purpose
 	has Average_Credit_Balance
-	has employment
 	has other_parties
 	has other_payment_plans
-	plays asset
+	plays asset;
 
 person sub entity
-	has housing
-	has job
-	has employment_length
+	has personal_status
 	has num_dependents
+	has is_foreign_worker
+	has existing_credits
+	plays worker
 	plays holder
-	plays resident
+	plays resident;
+
+job sub entity
+	has name #{ 'unemp/unskilled non res', 'unskilled resident', skilled, 'high qualif/self emp/mgmt'}
+	plays employment;
 
 property sub entity #{ 'real estate', 'life insurance', car, 'no known property', telephone} Cominbing two fields in the original data
 	has name
-	plays asset
+	plays asset;
 
-residence sub entity #{rent, own, for free}
-	has ownership_type 
-	has resident_since #not the best design - better to have this as a resource on the relationship. However, this would lead to an extra relationship chain in Amie+.
-	plays home
+residence sub entity 
+	has ownership_type #{rent, own, for free}
+	plays home;
 
-
-foreign_worker sub person
-national_worker sub person
+phone sub entity
+	plays asset;
 	
 
 

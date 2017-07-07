@@ -1,16 +1,24 @@
-holder sub role
-asset sub role
-home sub role
-resident sub role
+insert
 
+holder sub role;
+asset sub role;
+home sub role;
+resident sub role;
+worker sub role;
+employment sub role;
 
 #qualitative types written as roles
 
-
 holds sub relation
 	relates holder
-	relates asset
+	relates asset;
 
 livesIn sub relation
+	has resident_since
 	relates resident
-	relates home
+	relates home;
+
+worksAs sub relation
+	has employment_length
+	relates worker
+	relates employment;
