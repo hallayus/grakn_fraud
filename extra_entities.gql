@@ -1,17 +1,4 @@
-insert $unemp isa job has name "unemp/unskilled_non_res";
- $unski isa job has name "unskilled_resident";
- $skilled isa job has name "skilled";
- $highqua isa job has name "high_qualif/self_emp/mgmt";
-
- $realest isa property has name "real_estate";
- $lifeins isa property has name "life_insurance";
- $car isa property has name "car";
- $noprop isa property has name "no_known_property";
-
- $rent isa residence has ownership_type "rent";
- $own isa residence has ownership_type "own";
- $free isa residence has ownership_type "for_free";
-
+insert
  $phone isa phone;
 
 
