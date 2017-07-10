@@ -12,6 +12,7 @@ account sub entity
 	has Average_Credit_Balance
 	has other_parties
 	has other_payment_plans
+	has is_fraudulent
 	plays asset;
 
 person sub entity

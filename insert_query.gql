@@ -1,5 +1,4 @@
-match $j has name <job>; $i has ownership_type <housing>; $l has name <property_magnitude>; $k isa phone;
-
+match $k isa phone;
 
 insert
 	$x isa person
@@ -19,7 +18,17 @@ insert
 		has credit_history <credit_history>
 		has Average_Credit_Balance <Average_Credit_Balance>
 		has other_parties <other_parties>
+		has is_fraudulent <is_fraudulent>
 		has other_payment_plans <other_payment_plans>;
+
+	$j isa job 
+		has name <job>;
+
+	$i isa residence 
+		has ownership_type <housing>;
+
+	$l isa property
+		has name <property_magnitude>;
 
 	(worker : $x, employment : $j) isa worksAs has employment_length <employment>;
 	(resident : $x, home : $i) isa livesIn has resident_since @long(<residence_since>);

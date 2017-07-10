@@ -16,6 +16,7 @@ Average_Credit_Balance sub resource datatype string; #{ '<100', '100<=X<500', '5
 
 other_parties sub resource datatype string; #{ none, 'co applicant', guarantor}
 other_payment_plans sub resource datatype string; #{ bank, stores, none}
+is_fraudulent sub resource datatype string;
 
 #PERSON
 personal_status sub resource datatype string;

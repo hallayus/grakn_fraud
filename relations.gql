@@ -14,9 +14,11 @@ holds sub relation
 	relates asset;
 
 livesIn sub relation
+	has resident_since
 	relates resident
 	relates home;
 
 worksAs sub relation
+	has employment_length
 	relates worker
 	relates employment;
